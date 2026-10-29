@@ -1,0 +1,5 @@
+Summarize the following news article in approximately {target_words} words.
+Faithfully convey the key facts and the course of events described.
+
+Title: {title}
+Body: {body}

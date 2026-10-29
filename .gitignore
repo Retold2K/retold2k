@@ -1,0 +1,11 @@
+# rebuilt corpus and pipeline outputs (contain article text; never commit)
+code/data/
+collect_log.csv
+phase*/
+*_out/
+__pycache__/
+*.pyc
+.DS_Store
+keys.txt
+prompts/sixw_out/
+contrib/**/sixw_out/

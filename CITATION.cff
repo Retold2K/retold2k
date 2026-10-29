@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use ReTold-2k, cite the paper below."
+title: "ReTold-2k"
+type: dataset
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+    affiliation: "MODULABS"
+  - family-names: "TODO"
+    given-names: "TODO"
+  - family-names: "TODO"
+    given-names: "TODO"
+version: "1.0"
+date-released: "2026-12-TODO"
+repository-code: "https://github.com/TODO/retold2k"
+license: "CC-BY-NC-4.0"
+preferred-citation:
+  type: conference-paper
+  title: "What Breaks When Facts Become Stories? The Distortions Source-Agreement Metrics Miss When Models Retell Real Events"
+  collection-title: "Trust, Accountability, and Evaluation of AI (TAE) Workshop at NeurIPS 2026"
+  year: 2026
+  authors:
+    - family-names: "TODO"
+      given-names: "TODO"

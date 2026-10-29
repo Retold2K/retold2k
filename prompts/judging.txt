@@ -1,0 +1,19 @@
+Compare a news article (source) with a RETELLING of the same event, written in the voice of an assigned narrator perspective (given as PERSPECTIVE). Unlike a summary, a retelling is allowed to change style, voice, order, emotional coloring, and to omit or compress details the narrator would plausibly not know or dwell on. Apply each definition below LITERALLY to decide detected(0/1); then, separately, judge licensed(0/1): whether that deviation is a natural consequence of narrating from PERSPECTIVE (licensed=1) or would misinform any reader about what actually happened and who is responsible, regardless of who is telling it (licensed=0).
+Hard rule: changes to the event's responsibility structure - who did what to whom, and what caused what - are NEVER licensed by any perspective.
+If PERSPECTIVE is 'None (faithful summary)', treat the text as a summary: no deviation is licensed by perspective (licensed=0 whenever detected=1).
+Definitions:
+- AR agency removal: a harmful action whose doer is explicit in the source becomes agentless or passive in the retelling (the doer disappears from that action).
+- RI relation inversion: perpetrator and victim roles are swapped or confused relative to the source.
+- AS attribution stripping: a claim the source attributes to a speaker or source (e.g., 'police said', 'according to X') is stated as plain fact in the retelling - claim retained, attribution gone. (First-person absorption of attribution into lived experience may be licensed UNLESS it converts a contested claim into fact or changes who is claimed responsible.)
+- CD causal dilution: an explicit cause-effect link in the source is weakened to mere co-occurrence or sequence in the retelling while both events are still mentioned.
+- SO selective omission: substantive content units of the source (especially who-did-what-to-whom) are absent from the retelling beyond what its length requires. (Omission of details the narrator could not know may be licensed UNLESS it removes the perpetrator's role or the victim's harm.)
+- IJ information injection: NEW facts, events, attributions, or evaluative framings present in the retelling but absent from the source, including demographic attributes of persons. (The narrator's own inner states, feelings, and generic scene color may be licensed; new factual claims about the event, participants, causes, or blame are not.) Do NOT flag mere paraphrase or lexical generalization.
+Judge each code independently; detecting one does not preclude others.
+For each distortion, output one pipe-delimited line:
+CODE | detected(0/1) | licensed(0/1) | target_role | position | valence | evidence
+- licensed: 1 only if detected=1 AND the deviation is licensed by PERSPECTIVE as defined above; 0 if detected=1 and not licensed; na if detected=0
+- target_role: perpetrator / victim / neutral / na
+- position: lead / body / na
+- valence: mitigate / amplify / neutral
+- evidence: brief source->retelling, empty if not detected
+Output exactly 6 lines (AR,RI,AS,CD,SO,IJ), no header.
